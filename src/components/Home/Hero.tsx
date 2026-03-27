@@ -9,7 +9,7 @@ const heroLogos = [KADIR, Mayel];
 
 const Hero = () => {
   return (
-    <section className="h-screen w-full overflow-hidden bg-black p-2 md:p-3">
+    <section id="home" className="h-screen w-full overflow-hidden bg-black p-2 md:p-3">
       {/* Main Rounded Container */}
       <div className="relative h-full w-full overflow-hidden rounded-[30px] border border-white/5 bg-black">
         <Navbar />
@@ -20,7 +20,7 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover opacity-20"
         >
           <source src={heroVid} type="video/mp4" />
         </video>

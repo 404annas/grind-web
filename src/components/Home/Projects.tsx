@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   image: string;
   tag: string;
   title: string;
   color: string;
+  href?: string;
   className?: string;
 }
 
@@ -16,22 +18,20 @@ const ProjectCard = ({
   tag,
   title,
   color,
+  href,
   className,
 }: ProjectCardProps) => {
-  return (
+  const content = (
     <div
       className={`relative group cursor-pointer border-[8px] rounded-3xl overflow-hidden aspect-[4/5] w-full transition-transform duration-500 hover:-rotate-2 ${className}`}
       style={{ borderColor: color }}
     >
-      {/* Background Image */}
       <img
-        loading="lazy"
         src={image}
         alt={title}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
       />
 
-      {/* Slanted Content Box (Doodle Design) */}
       <div
         className="absolute bottom-3 left-3 right-3 p-6 pt-10 flex flex-col items-start justify-end"
         style={{
@@ -40,57 +40,60 @@ const ProjectCard = ({
           borderRadius: "0px 20px 30px 30px",
         }}
       >
-        {/* Arrow Button */}
         <div className="absolute top-4 right-6 bg-white rounded-full p-2 text-black">
           <ArrowUpRight size={24} strokeWidth={3} />
         </div>
 
-        {/* Title */}
         <h3 className="text-white text-lg md:text-xl font-bold leading-tight tracking-tight mb-2">
           {title}
         </h3>
 
-        {/* Tag */}
         <span className="bg-white/30 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg">
           {tag}
         </span>
       </div>
     </div>
   );
+
+  if (href) {
+    return <Link href={href}>{content}</Link>;
+  }
+
+  return content;
 };
 
 const Projects = () => {
   const projectData = [
     {
-      title: "Hello World",
-      tag: "Bullit",
+      title: "Dhar Man",
+      tag: "Episodes",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600",
-      color: "#FF5F2D", // Orange
-      offset: "translate-y-24", // Lowest
+        "/dharman.JPG",
+      color: "#000",
+      offset: "translate-y-24",
+      href: "/dhar-man",
     },
     {
-      title: "Hello World",
-      tag: "Roasta",
+      title: "Employee Of The Year",
+      tag: "Posters",
       image:
-        "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=600",
-      color: "#0084FF", // Blue
-      offset: "translate-y-12", // Center
+        "eoty.jpg",
+      color: "#000",
+      offset: "translate-y-12",
     },
     {
-      title: "Hello World",
-      tag: "Loco",
+      title: "The Road",
+      tag: "Adventures",
       image:
         "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600",
-      color: "#37C682", // Green
-      offset: "translate-y-0", // Highest
+      color: "#000",
+      offset: "translate-y-0",
     },
   ];
 
   return (
-    <section className="bg-[#FAF7F0] min-h-screen py-10 pb-34 px-6 md:px-12 lg:px-20">
+    <section id="projects" className="bg-[#FAF7F0] min-h-screen py-10 pb-34 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        {/* Projects Staggered Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {projectData.map((project, index) => (
             <ProjectCard key={index} {...project} className={project.offset} />
