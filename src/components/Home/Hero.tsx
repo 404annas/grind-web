@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="absolute inset-x-0 -bottom-50 flex h-full items-end justify-center pointer-events-none">
           <div className="relative w-full max-w-[95%] mb-[-2%] flex justify-center items-end">
             {/* --- PRIMARY MASKED VIDEO LAYER --- */}
-            <div className="relative w-full h-[30vh] md:h-[45vh] lg:h-[90vh] rotate-[7.5deg]">
+            <div className="relative w-full h-[30vh] md:h-[45vh] lg:h-[90vh] rotate-[7.6deg]">
               {/* This container clips the video to the logo shape */}
               <div 
                 className="absolute inset-0 w-full h-full"
