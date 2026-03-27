@@ -1,17 +1,23 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { ArrowRight, Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { FaInstagram } from "react-icons/fa";
 
 const Navbar = () => {
-  const navLinks = ["Our mission", "Value", "App", "Events"];
+  const navLinks = ["Home", "About", "Projects", "Contact"];
 
   return (
     <nav className="absolute -top-10 left-0 z-50 flex w-full items-center justify-between px-6 py-4 md:px-10 md:py-5 bg-transparent">
       {/* Logo */}
       <div className="w-24 md:w-40 hover:opacity-80 cursor-pointer transition-all duration-300">
-        <Image src={logo} alt="Kadir logo" className="h-auto w-full object-contain" priority />
+        <Image
+          src={logo}
+          alt="Kadir logo"
+          className="h-auto w-full object-contain"
+          priority
+        />
       </div>
 
       {/* Menu Items */}
@@ -29,10 +35,16 @@ const Navbar = () => {
       </div>
 
       {/* Book a Demo Button */}
-      <button className="group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-6 py-[14px] text-sm font-light text-white backdrop-blur-md transition-all cursor-pointer duration-300 hover:scale-95 hover:bg-white/10 active:scale-90">
-        <span>Book a demo</span>
-        <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-      </button>
+      <div className="flex items-center gap-2">
+        <p className="rounded-full border border-white/20 bg-white/5 py-3 px-5 flex items-center gap-2">
+          <Phone size={18}/>
+          <p>7474665773</p>
+        </p>
+        <p className="rounded-full border border-white/20 bg-white/5 py-3 px-5 flex items-center gap-2">
+          <FaInstagram />
+          <p>kadir.mayel</p>
+        </p>
+      </div>
     </nav>
   );
 };
