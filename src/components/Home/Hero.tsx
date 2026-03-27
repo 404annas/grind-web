@@ -36,7 +36,7 @@ const Hero = () => {
                   className="relative h-full"
                   style={{
                     width: index === 0 ? '44%' : '54%',
-                    transform: index === 1 ? 'translateY(-18.5%) translateX(-20%)' : 'none',
+                    transform: index === 1 ? 'translateY(-18.5%) translateX(-18%)' : 'none',
                   }}
                 >
                   {/* This container clips the video to the logo shape */}
