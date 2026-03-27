@@ -11,6 +11,10 @@ interface ProjectCardProps {
   color: string;
   href?: string;
   className?: string;
+  imageClassName?: string;
+  imageStyle?: React.CSSProperties;
+  imagePositionClassName?: string;
+  imageWrapperClassName?: string;
 }
 
 const ProjectCard = ({
@@ -20,17 +24,24 @@ const ProjectCard = ({
   color,
   href,
   className,
+  imageClassName,
+  imageStyle,
+  imagePositionClassName,
+  imageWrapperClassName,
 }: ProjectCardProps) => {
   const content = (
     <div
       className={`relative group cursor-pointer border-[8px] rounded-3xl overflow-hidden aspect-[4/5] w-full transition-transform duration-500 hover:-rotate-2 ${className}`}
       style={{ borderColor: color }}
     >
-      <img
-        src={image}
-        alt={title}
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      <div className={`absolute inset-0 ${imageWrapperClassName || ""}`}>
+        <img
+          src={image}
+          alt={title}
+          className={`absolute h-full w-full object-cover ${imagePositionClassName || "inset-0"} ${imageClassName || ""}`}
+          style={imageStyle}
+        />
+      </div>
 
       <div
         className="absolute bottom-3 left-3 right-3 p-6 pt-10 flex flex-col items-start justify-end"
@@ -85,9 +96,13 @@ const Projects = () => {
       title: "The Road",
       tag: "Adventures",
       image:
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600",
+        "the-road.png",
       color: "#000",
       offset: "translate-y-0",
+      imageClassName: "object-bottom",
+      imageStyle: { objectPosition: "center bottom" },
+      imagePositionClassName: "bottom-0 left-0 inset-x-0 h-full -translate-y-30",
+      imageWrapperClassName: " bg-[#000]",
     },
   ];
 
