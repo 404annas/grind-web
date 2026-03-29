@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
 import FloatingInstagram from "@/components/FloatingInstagram";
 import "./globals.css";
+import Footer from "@/components/Home/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={`${poppins.className} min-h-full flex flex-col`}>
         {children}
         <FloatingInstagram />
+        <Footer />
       </body>
     </html>
   );

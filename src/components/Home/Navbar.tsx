@@ -65,10 +65,6 @@ const Navbar = () => {
           <Phone size={18}/>
           <p>7474665773</p>
         </div>
-        {/* <p className="rounded-full border border-white/20 bg-white/5 py-3 px-5 flex items-center gap-2">
-          <FaInstagram />
-          <p>kadir.mayel</p>
-        </p> */}
       </div>
     </nav>
   );

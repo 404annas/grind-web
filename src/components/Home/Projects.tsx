@@ -91,6 +91,7 @@ const Projects = () => {
         "eoty.jpg",
       color: "#000",
       offset: "translate-y-12",
+      href: "/employee-of-the-year",
     },
     {
       title: "The Road",
@@ -103,6 +104,7 @@ const Projects = () => {
       imageStyle: { objectPosition: "center bottom" },
       imagePositionClassName: "bottom-0 left-0 inset-x-0 h-full -translate-y-30",
       imageWrapperClassName: " bg-[#000]",
+      href: "/the-road",
     },
   ];
 
