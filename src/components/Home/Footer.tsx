@@ -36,22 +36,23 @@ const Footer = () => {
   };
 
   return (
-    <div className="relative bg-black text-white py-8 px-10 uppercase text-center font-bold flex flex-col md:flex-row items-center justify-between gap-6 border-t border-white/10">
+    <div className="relative bg-black text-white py-8 px-4 sm:px-10 uppercase text-center font-bold flex flex-col md:flex-row items-center justify-between gap-6 border-t border-white/10">
       <div className="flex gap-4 items-center">
         <div>
           <img
           loading="lazy"
             src="/logo2.svg"
             alt="Logo"
-            className="w-[500px] h-auto max-w-full object-contain"
+            className="w-[500px] h-auto max-w-full mx-auto object-contain"
           />
 
-          <p className="uppercase text-base sm:text-xl pr-24">
+          <p className="uppercase text-sm sm:text-base md:text-xl lg:pr-24">
             A filmmaker & cinematographer
           </p>
+          <p className="text-xs text-left md:block hidden pt-8 pl-6 text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
         </div>
       </div>
-      <div className="pr-20">
+      <div className="lg:pr-20">
         <nav className="flex flex-col items-start justify-center gap-2">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -68,8 +69,8 @@ const Footer = () => {
             );
           })}
         </nav>
-        <p className="text-xs pt-4 text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
       </div>
+      <p className="text-xs md:hidden block text-left pt-2 text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
     </div>
   );
 };

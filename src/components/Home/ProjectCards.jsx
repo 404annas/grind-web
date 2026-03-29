@@ -153,9 +153,9 @@ const ProjectCards = ({
               alt=""
               width={160}
               height={160}
-              className="mx-auto mt-2 w-20 translate-x-24 rotate-40 animate-float pb-5 sm:translate-x-80 md:w-40 translate-y-24"
+              className="mx-auto mt-2 w-20 translate-x-30 rotate-40 animate-float pb-5 sm:translate-x-80 md:w-40 translate-y-26"
             />
-            <h1 className="pb-10 text-center text-4xl font-bold uppercase sm:text-5xl">
+            <h1 className="pb-10 text-center text-2xl sm:text-3xl md:text-4xl font-bold uppercase lg:text-5xl">
               {title}
             </h1>
           </>
@@ -171,7 +171,7 @@ const ProjectCards = ({
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className={`relative h-[500px] w-[300px] overflow-hidden rounded-[28px] border-4 border-white md:h-[560px] md:w-[340px] ${card.z} ${card.position}`}
+              className={`relative h-[450px] w-[300px] overflow-hidden rounded-[28px] border-4 border-white md:h-[560px] md:w-[340px] ${card.z} ${card.position}`}
             >
               <video
                 src={card.src}

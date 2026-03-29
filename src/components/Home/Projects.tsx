@@ -84,7 +84,7 @@ const Projects = () => {
       image:
         "/dharman.JPG",
       color: "#000",
-      offset: "translate-y-24",
+      offset: "translate-y-0 md:translate-y-0",
       href: "/dhar-man",
     },
     {
@@ -93,7 +93,7 @@ const Projects = () => {
       image:
         "eoty.jpg",
       color: "#000",
-      offset: "translate-y-12",
+      offset: "translate-y-0 md:translate-y-0",
       href: "/employee-of-the-year",
     },
     {
@@ -105,16 +105,16 @@ const Projects = () => {
       offset: "translate-y-0",
       imageClassName: "object-bottom",
       imageStyle: { objectPosition: "center bottom" },
-      imagePositionClassName: "bottom-0 left-0 inset-x-0 h-full -translate-y-30",
+      imagePositionClassName: "bottom-0 left-0 inset-x-0 h-full -translate-y-0 md:translate-y-0",
       imageWrapperClassName: " bg-[#000]",
       href: "/the-road",
     },
   ];
 
   return (
-    <section id="projects" className="bg-[#FAF7F0] min-h-screen py-10 pb-34 px-6 md:px-12 lg:px-20">
+    <section id="projects" className="bg-[#FAF7F0] min-h-screen md:py-10 pb-10 px-4 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 items-start">
           {projectData.map((project, index) => (
             <ProjectCard key={index} {...project} className={project.offset} />
           ))}

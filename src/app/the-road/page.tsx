@@ -87,7 +87,7 @@ const ProjectPage = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter mb-8 italic"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter mb-8 italic"
         >
           The <span className="italic text-white">Road</span>
         </motion.h1>
@@ -113,7 +113,7 @@ const ProjectPage = () => {
             <h2 className="text-xl font-bold uppercase text-white mb-8">
               Synopsis
             </h2>
-            <p className="text-base text-gray-300 leading-normal font-light">
+            <p className="text-sm sm:text-base text-gray-300 leading-normal font-light">
               In the dead of winter 2012, seven Syrian refugees trek through the
               icy forests between Turkey and Bulgaria. Among them is Karim and
               his 12-year-old niece Yara, burning with fever, barely clinging to
@@ -131,7 +131,7 @@ const ProjectPage = () => {
             <h2 className="text-xl font-bold uppercase text-white mb-8 pt-10">
               Director Statement
             </h2>
-            <div className="text-base text-gray-300 leading-normal font-light space-y-6 max-w-3xl">
+            <div className="text-sm sm:text-base text-gray-300 leading-normal font-light space-y-6 max-w-3xl">
               <p>
                 For me, The Road is more than just a film—it's a deeply personal
                 story.
@@ -167,7 +167,7 @@ const ProjectPage = () => {
       </section>
 
       {/* Gallery: The Road (3 Items per row) */}
-      <section className="px-6 py-10 max-w-6xl mx-auto">
+      <section className="px-6 pb-10 md:pt-10 pt-0 max-w-6xl mx-auto">
         <h2 className="text-xl font-bold uppercase text-white mb-10">
           Visual Journey
         </h2>
@@ -195,7 +195,7 @@ const ProjectPage = () => {
         <h2 className="text-xl font-bold uppercase text-white mb-10 text-center">
           The Cast
         </h2>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
           {castImages.map((src, idx) => (
             <div
               key={idx}
@@ -217,7 +217,7 @@ const ProjectPage = () => {
 
       {/* FAQ Section */}
       <section className="px-6 py-10 max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 tracking-tighter uppercase italic">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 tracking-tighter uppercase italic">
           Questions <span className="italic text-white">&</span> Answers
         </h2>
         <div className="space-y-4">
@@ -228,7 +228,7 @@ const ProjectPage = () => {
                 className="w-full py-6 flex justify-between items-center text-left group cursor-pointer"
               >
                 <span
-                  className={`text-lg transition-colors ${openFaq === index ? "text-white" : "text-white"}`}
+                  className={`text-sm sm:text-base transition-colors ${openFaq === index ? "text-white" : "text-white"}`}
                 >
                   {index + 1}. {faq.q}
                 </span>
@@ -248,7 +248,7 @@ const ProjectPage = () => {
                     }}
                     className="overflow-hidden"
                   >
-                    <p className="pb-8 text-gray-400 leading-relaxed font-light">
+                    <p className="pb-8 text-gray-400 leading-relaxed sm:text-base text-sm font-light">
                       {faq.a}
                     </p>
                   </motion.div>
@@ -264,7 +264,7 @@ const ProjectPage = () => {
         <p className="text-white text-xl font-bold uppercase mb-8">
           In Memory
         </p>
-        <p className="max-w-2xl mx-auto text-gray-400 leading-normal">
+        <p className="max-w-2xl sm:text-base text-sm mx-auto text-gray-400 leading-normal">
           "This film is dedicated to those who perished in the fight for
           freedom, and to the countless others whose stories will never be
           told."

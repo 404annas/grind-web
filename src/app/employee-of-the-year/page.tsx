@@ -15,7 +15,7 @@ const ProjectPage = () => {
       <Navbar2 />
       <article className="max-w-4xl mx-auto text-center">
         {/* Title Section */}
-        <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6 italic">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6 italic">
           Employee <span className="italic">of the Year</span>
         </h1>
 
@@ -25,7 +25,7 @@ const ProjectPage = () => {
         </div>
 
         {/* Sections */}
-        <section className="space-y-16 mb-20">
+        <section className="space-y-16 mb-10 md:mb-20">
           {/* Logline */}
           <div>
             <h2 className="text-xl md:text-2xl font-bold uppercase tracking-tight mb-6">
@@ -44,7 +44,7 @@ const ProjectPage = () => {
             <h2 className="text-xl md:text-2xl font-bold uppercase tracking-tight mb-6">
               Director Statement
             </h2>
-            <div className="text-sm md:text-base leading-relaxed font-regular space-y-4 max-w-3xl mx-auto text-justify md:text-center">
+            <div className="text-sm md:text-base leading-relaxed font-regular space-y-4 max-w-3xl mx-auto text-center md:text-center">
               <p>
                 I used to be an engineer, working long hours in an office, day
                 after day, constantly looking forward to the weekend. Over time,
@@ -118,9 +118,6 @@ const ProjectPage = () => {
           </div>
         </section>
       </article>
-
-      {/* Padding at bottom */}
-      <div className="h-10" />
     </main>
   );
 };

@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { FaInstagram } from 'react-icons/fa';
 
 const FloatingInstagram = () => {
@@ -10,7 +9,7 @@ const FloatingInstagram = () => {
       target="_blank"
       rel="noreferrer"
       aria-label="Open Instagram profile"
-      className="fixed bottom-6 right-6 z-[100] flex items-center gap-2 rounded-full bg-black p-5 text-white border border-white"
+      className="fixed bottom-6 right-6 z-[100] flex items-center gap-2 rounded-full bg-black p-4 sm:p-5 text-white border border-white"
     >
       <FaInstagram size={22}/>
     </a>
