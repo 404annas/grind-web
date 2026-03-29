@@ -68,6 +68,7 @@ const Footer = () => {
             );
           })}
         </nav>
+        <p className="text-xs pt-4 text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
       </div>
     </div>
   );
