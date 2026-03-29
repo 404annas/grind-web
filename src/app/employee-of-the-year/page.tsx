@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
 import Navbar2 from '@/components/Home/Navbar2';
 
 const ProjectPage = () => {

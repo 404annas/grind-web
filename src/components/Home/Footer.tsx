@@ -3,6 +3,7 @@
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import { Phone } from "lucide-react";
 
 const navItems = [
   { label: "Home", id: "home" },
@@ -48,8 +49,8 @@ const Footer = () => {
           A Film Production Company & Creative Agency
         </p>
       </div>
-      <div className="pr-24">
-        <nav className="flex flex-col items-start justify-center gap-2">
+      <div className="pr-20">
+        <nav className="flex flex-col items-center justify-center gap-2">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -61,6 +62,12 @@ const Footer = () => {
             </a>
           ))}
         </nav>
+        <div className="pt-2">
+          <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3">
+            <Phone size={18} />
+            <p>7474665773</p>
+          </div>
+        </div>
       </div>
     </div>
   );
