@@ -89,10 +89,10 @@ const ProjectPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter mb-8 italic"
         >
-          The <span className="italic text-blue-300">Road</span>
+          The <span className="italic text-white">Road</span>
         </motion.h1>
 
-        <div className="max-w-2xl mx-auto mb-10">
+        <div className="max-w-2xl mx-auto">
           <p className="text-sm md:text-base font-light leading-normal text-gray-200">
             "When a refugee’s journey to safety falls apart, a devoted uncle
             must carry his sick niece through the snow, knowing he may not reach
@@ -103,9 +103,9 @@ const ProjectPage = () => {
 
       {/* Synopsis & Statement Grid */}
       <section className="px-6 py-10 bg-gradient-to-b from-black to-[#05080a]">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
           <div>
-            <h2 className="text-xl font-bold uppercase text-blue-300 mb-8">
+            <h2 className="text-xl font-bold uppercase text-white mb-8">
               Synopsis
             </h2>
             <p className="text-base text-gray-300 leading-normal font-light">
@@ -123,20 +123,20 @@ const ProjectPage = () => {
             </p>
           </div>
           <div>
-            <h2 className="text-xl font-bold uppercase text-blue-300 mb-8">
+            <h2 className="text-xl font-bold uppercase text-white mb-8 pt-10">
               Director Statement
             </h2>
-            <div className="text-base text-gray-300 leading-normal font-light space-y-6">
+            <div className="text-base text-gray-300 leading-normal font-light space-y-6 max-w-3xl">
               <p>
-                For me, The Road is more than just a film—it’s a deeply personal
+                For me, The Road is more than just a film—it's a deeply personal
                 story.
               </p>
               <p>
                 I know what it feels like to walk through unfamiliar lands, to
                 move forward with nothing but hope and exhaustion in my bones.
               </p>
-              <p className="border-l border-blue-300/30 pl-6">
-                "But The Road is not just about suffering. It’s about
+              <p>
+                "But The Road is not just about suffering. It's about
                 resilience. About the human spirit that refuses to break, even
                 when the world turns its back."
               </p>
@@ -147,7 +147,7 @@ const ProjectPage = () => {
 
       {/* Production Video (Wireframe style) */}
       <section className="px-6 py-10 max-w-6xl mx-auto">
-        <h2 className="text-center text-xl font-bold uppercase text-blue-300 mb-10">
+        <h2 className="text-center text-xl font-bold uppercase text-white mb-10">
           Production Vlog
         </h2>
         <div className="w-full flex justify-center overflow-hidden">
@@ -163,7 +163,7 @@ const ProjectPage = () => {
 
       {/* Gallery: The Road (3 Items per row) */}
       <section className="px-6 py-10 max-w-6xl mx-auto">
-        <h2 className="text-xl font-bold uppercase text-blue-300 mb-10">
+        <h2 className="text-xl font-bold uppercase text-white mb-10">
           Visual Journey
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -185,52 +185,35 @@ const ProjectPage = () => {
         </div>
       </section>
 
-      {/* Gallery: Cast (3 row then 2 row) */}
-      <section className="px-6 py-10 max-w-6xl mx-auto">
-        <h2 className="text-xl font-bold uppercase text-blue-300 mb-10">
+      {/* Gallery: Cast */}
+      <section className="px-6 py-10 max-w-4xl mx-auto">
+        <h2 className="text-xl font-bold uppercase text-white mb-10 text-center">
           The Cast
         </h2>
-        <div className="space-y-4">
-          {/* First Row: 3 images */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {castImages.slice(0, 3).map((src, idx) => (
-              <div
-                key={idx}
-                className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden relative"
-              >
+        <div className="flex flex-wrap justify-center gap-8">
+          {castImages.map((src, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center gap-2"
+            >
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden relative border-2 border-white/10">
                 <Image
                   src={src}
                   alt={`Cast ${idx + 1}`}
                   fill
-                  className="object-cover border border-white/5"
+                  className="object-cover"
                   loading="lazy"
                 />
               </div>
-            ))}
-          </div>
-          {/* Second Row: 2 images centered */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            {castImages.slice(3, 5).map((src, idx) => (
-              <div
-                key={idx}
-                className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden relative"
-              >
-                <Image
-                  src={src}
-                  alt={`Cast ${idx + 4}`}
-                  fill
-                  className="object-cover border border-white/5"
-                />
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="px-6 py-10 max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 tracking-tighter uppercase italic">
-          Questions <span className="italic text-blue-300">&</span> Answers
+          Questions <span className="italic text-white">&</span> Answers
         </h2>
         <div className="space-y-4">
           {faqData.map((faq, index) => (
@@ -240,11 +223,11 @@ const ProjectPage = () => {
                 className="w-full py-6 flex justify-between items-center text-left group cursor-pointer"
               >
                 <span
-                  className={`text-lg transition-colors ${openFaq === index ? "text-blue-300" : "text-white"}`}
+                  className={`text-lg transition-colors ${openFaq === index ? "text-white" : "text-white"}`}
                 >
                   {index + 1}. {faq.q}
                 </span>
-                <div className="text-blue-400 transition-transform duration-300">
+                <div className="text-white transition-transform duration-300">
                   {openFaq === index ? <X size={20} /> : <Plus size={20} />}
                 </div>
               </button>
@@ -273,7 +256,7 @@ const ProjectPage = () => {
 
       {/* Footer Tribute */}
       <footer className="py-10 px-6 text-center border-t border-white/5">
-        <p className="text-blue-300 text-xl font-bold uppercase mb-8">
+        <p className="text-white text-xl font-bold uppercase mb-8">
           In Memory
         </p>
         <p className="max-w-2xl mx-auto text-gray-400 leading-normal">
