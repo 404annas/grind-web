@@ -9,7 +9,7 @@ const navItems = [
   { label: "About", id: "about", icon: UserRound },
   { label: "Projects", id: "projects", icon: FolderOpen },
   { label: "Gallery", id: "gallery", icon: Image },
-  { label: "Contact", id: "contact", icon: Phone },
+  { label: "7474665773", id: "contact", icon: Phone },
 ];
 
 const Footer = () => {

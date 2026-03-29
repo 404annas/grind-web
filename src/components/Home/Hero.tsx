@@ -23,7 +23,7 @@ const Hero = () => {
         </video>
 
         {/* 2. The Massive Masked Logo Section (Centered Bottom) */}
-        <div className="absolute inset-x-0 bottom-0 flex h-full items-end justify-center pointer-events-none overflow-hidden">
+        <div className="absolute inset-x-0 bottom-4 md:bottom-0 flex h-full items-end justify-center pointer-events-none overflow-hidden">
           {/* 
               W-[140%] makes the logo span wider than the screen for that monumental look.
               No rotations or translateY here, so it stays perfectly "equal up and down".

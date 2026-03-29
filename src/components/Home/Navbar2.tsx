@@ -32,9 +32,9 @@ const Navbar2 = () => {
   };
 
   return (
-    <nav className="absolute -top-10 left-0 z-50 flex w-full items-center justify-between bg-transparent px-6 py-4 md:px-10 md:py-5">
+    <nav className="absolute -top-8 md:-top-10 left-0 z-50 flex w-full items-center justify-between bg-transparent px-6 py-4 md:px-10 md:py-5">
       <Link href={"/"}>
-        <div className="w-24 cursor-pointer transition-all duration-300 hover:opacity-80 md:w-40">
+        <div className="w-28 cursor-pointer transition-all duration-300 hover:opacity-80 md:w-40">
           <Image
             src={logo}
             alt="Kadir logo"
@@ -59,7 +59,7 @@ const Navbar2 = () => {
       </div>
 
       <div className="flex items-center gap-2 text-white">
-        <div className="flex items-center gap-2 text-white rounded-full border border-white/20 bg-white/5 px-5 py-3">
+        <div className="flex items-center md:text-base text-sm gap-2 text-white rounded-full border border-white/20 bg-white/5 px-5 py-3">
           <Phone size={18} className="text-white"/>
           <p className="text-white">7474665773</p>
         </div>
