@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kadir",
-  description: "I'm Kadir",
+  title: "Kadir Mayel - Filmmaker & Cinematographer",
+  description: "Kadir Mayel is a filmmaker, cinematographer, and founder of Twelve Tablets Productions. With a background in engineering and a deep passion for storytelling, he brings a bold visual style and emotional depth to his work. His films often explore themes of identity, memory, and transformation, blending grounded realism with high-concept ideas. Kadir has written and directed several acclaimed short films and is currently developing his first feature. He studied at the New York Film Academy and continues to push creative boundaries through both narrative and commercial projects.",
 };
 
 export default function RootLayout({

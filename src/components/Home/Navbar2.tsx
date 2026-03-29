@@ -61,7 +61,7 @@ const Navbar2 = () => {
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3">
           <Phone size={18} />
-          <p>7474665773</p>
+          <p className="text-white">7474665773</p>
         </div>
       </div>
     </nav>

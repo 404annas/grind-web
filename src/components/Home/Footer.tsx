@@ -2,7 +2,6 @@
 
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
-import NextImage from "next/image";
 import { Phone, Home, FolderOpen, Image, UserRound } from "lucide-react";
 
 const navItems = [
@@ -10,6 +9,7 @@ const navItems = [
   { label: "About", id: "about", icon: UserRound },
   { label: "Projects", id: "projects", icon: FolderOpen },
   { label: "Gallery", id: "gallery", icon: Image },
+  { label: "Contact", id: "contact", icon: Phone },
 ];
 
 const Footer = () => {
@@ -36,28 +36,22 @@ const Footer = () => {
   };
 
   return (
-    <div className="relative bg-black text-white py-10 sm:py-6 px-4 uppercase text-center font-bold flex flex-col md:flex-row items-center justify-between gap-6 border-t border-white/10">
-      <div className="flex gap-4">
-        <img
-          loading="lazy"
-          src="/kadir.jpg"
-          alt="Kadir"
-          className="w-20 h-20 md:w-24 md:h-24 mt-2 translate-x-8 rounded-full object-cover flex-shrink-0"
-        />
+    <div className="relative bg-black text-white py-8 px-10 uppercase text-center font-bold flex flex-col md:flex-row items-center justify-between gap-6 border-t border-white/10">
+      <div className="flex gap-4 items-center">
         <div>
           <img
-            loading="lazy"
-            className="w-[600px] mx-auto h-auto max-w-full object-contain"
+          loading="lazy"
             src="/logo2.svg"
             alt="Logo"
+            className="w-[500px] h-auto max-w-full object-contain"
           />
 
-          <p className="uppercase text-base sm:text-xl pr-34">
-            A Film filmmaker & cinematographer
+          <p className="uppercase text-base sm:text-xl pr-24">
+            A filmmaker & cinematographer
           </p>
         </div>
       </div>
-      <div className="pr-24">
+      <div className="pr-20">
         <nav className="flex flex-col items-start justify-center gap-2">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -74,12 +68,6 @@ const Footer = () => {
             );
           })}
         </nav>
-        <div className="pt-2">
-          <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3">
-            <Phone size={18} />
-            <p>7474665773</p>
-          </div>
-        </div>
       </div>
     </div>
   );
