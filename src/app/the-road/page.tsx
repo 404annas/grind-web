@@ -83,7 +83,7 @@ const ProjectPage = () => {
       <Navbar2 />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-10 px-6 max-w-6xl mx-auto text-center">
+      <section className="pt-40 px-6 max-w-6xl mx-auto text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,6 +91,11 @@ const ProjectPage = () => {
         >
           The <span className="italic text-white">Road</span>
         </motion.h1>
+
+        {/* Tag */}
+        <div className="inline-block border border-dashed border-gray-500 px-4 py-1 text-xs md:text-sm font-medium uppercase tracking-widest mb-10">
+          Film
+        </div>
 
         <div className="max-w-2xl mx-auto">
           <p className="text-sm md:text-base font-light leading-normal text-gray-200">
