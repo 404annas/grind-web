@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X } from "lucide-react";
+import Image from "next/image";
 import Navbar2 from "@/components/Home/Navbar2";
 
 const faqData = [
@@ -170,13 +171,14 @@ const ProjectPage = () => {
             <motion.div
               key={idx}
               whileHover={{ scale: 0.98 }}
-              className="aspect-square bg-[#0a0a0a] rounded-sm overflow-hidden group"
+              className="aspect-square bg-[#0a0a0a] rounded-sm overflow-hidden group relative"
             >
-              <img
-                loading="lazy"
+              <Image
                 src={src}
                 alt={`Road ${idx + 1}`}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                loading="lazy"
               />
             </motion.div>
           ))}
@@ -194,13 +196,14 @@ const ProjectPage = () => {
             {castImages.slice(0, 3).map((src, idx) => (
               <div
                 key={idx}
-                className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden"
+                className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden relative"
               >
-                <img
-                  loading="lazy"
+                <Image
                   src={src}
                   alt={`Cast ${idx + 1}`}
-                  className="w-full h-full object-cover border border-white/5"
+                  fill
+                  className="object-cover border border-white/5"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -210,12 +213,13 @@ const ProjectPage = () => {
             {castImages.slice(3, 5).map((src, idx) => (
               <div
                 key={idx}
-                className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden"
+                className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden relative"
               >
-                <img
+                <Image
                   src={src}
                   alt={`Cast ${idx + 4}`}
-                  className="w-full h-full object-cover border border-white/5"
+                  fill
+                  className="object-cover border border-white/5"
                 />
               </div>
             ))}

@@ -36,6 +36,7 @@ const ProjectCard = ({
     >
       <div className={`absolute inset-0 ${imageWrapperClassName || ""}`}>
         <img
+        loading="lazy"
           src={image}
           alt={title}
           className={`absolute h-full w-full object-cover ${imagePositionClassName || "inset-0"} ${imageClassName || ""}`}
@@ -67,7 +68,9 @@ const ProjectCard = ({
   );
 
   if (href) {
-    return <Link href={href}>{content}</Link>;
+    return <Link href={href} onClick={() => window.scrollTo(0, 0)}>
+      {content}
+    </Link>;
   }
 
   return content;
