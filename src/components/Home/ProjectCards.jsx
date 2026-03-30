@@ -11,6 +11,7 @@ const defaultCards = [
     rotation: -6,
     position: "",
     z: "z-20",
+    url: "#",
   },
   {
     src: "/dhar-vid2.mp4",
@@ -18,6 +19,7 @@ const defaultCards = [
     rotation: -1,
     position: "",
     z: "z-30",
+    url: "#",
   },
   {
     src: "/dhar-vid3.mp4",
@@ -25,6 +27,7 @@ const defaultCards = [
     rotation: 4,
     position: "",
     z: "z-20",
+    url: "#",
   },
 ];
 
@@ -155,7 +158,7 @@ const ProjectCards = ({
               height={160}
               className="mx-auto mt-2 w-20 translate-x-30 rotate-40 animate-float pb-5 sm:translate-x-80 md:w-40 translate-y-26"
             />
-            <h1 className="pb-10 text-center text-2xl sm:text-3xl md:text-4xl font-bold uppercase lg:text-5xl">
+            <h1 className="pb-10 text-center font-lime italic text-2xl sm:text-3xl md:text-4xl font-bold uppercase lg:text-5xl">
               {title}
             </h1>
           </>
@@ -166,23 +169,30 @@ const ProjectCards = ({
           className="relative flex min-h-[560px] flex-col items-center justify-center gap-4 lg:min-h-[640px] lg:flex-row"
         >
           {cards.map((card, index) => (
-            <article
+            <a
               key={card.title}
-              ref={(el) => {
-                cardRefs.current[index] = el;
-              }}
-              className={`relative h-[450px] w-[300px] overflow-hidden rounded-[28px] border-4 border-white md:h-[560px] md:w-[340px] ${card.z} ${card.position}`}
+              href={card.url || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
             >
-              <video
-                src={card.src}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="h-full w-full object-cover"
-              />
-            </article>
+              <article
+                ref={(el) => {
+                  cardRefs.current[index] = el;
+                }}
+                className={`relative h-[450px] w-[300px] overflow-hidden rounded-[28px] border-4 border-white md:h-[560px] md:w-[340px] ${card.z} ${card.position}`}
+              >
+                <video
+                  src={card.src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-cover"
+                />
+              </article>
+            </a>
           ))}
         </div>
       </div>

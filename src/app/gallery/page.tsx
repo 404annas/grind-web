@@ -22,7 +22,7 @@ const GalleryPage = () => {
         <Navbar />
       {/* Header Section */}
       <header className="max-w-3xl mb-10 mx-auto">
-        <h1 className="text-4xl md:text-5xl italic font-bold text-center tracking-tighter mb-4 uppercase">
+        <h1 className="text-4xl md:text-5xl italic font-lime font-bold text-center tracking-tighter mb-4 uppercase">
           Visual Anthology
         </h1>
         <p className="text-gray-400 text-sm md:text-base max-w-2xl leading-normal text-center mx-auto">

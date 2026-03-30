@@ -15,7 +15,7 @@ const ProjectPage = () => {
       <Navbar2 />
       <article className="max-w-4xl mx-auto text-center">
         {/* Title Section */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6 italic">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-lime font-black uppercase tracking-tighter leading-none mb-6 italic">
           Employee <span className="italic">of the Year</span>
         </h1>
 
@@ -28,7 +28,7 @@ const ProjectPage = () => {
         <section className="space-y-16 mb-10 md:mb-20">
           {/* Logline */}
           <div>
-            <h2 className="text-xl md:text-2xl font-bold uppercase tracking-tight mb-6">
+            <h2 className="text-xl md:text-2xl font-lime font-bold uppercase tracking-tight mb-6">
               Logline
             </h2>
             <p className="text-sm md:text-base leading-relaxed font-reegular max-w-3xl mx-auto">
@@ -41,7 +41,7 @@ const ProjectPage = () => {
 
           {/* Director Statement */}
           <div>
-            <h2 className="text-xl md:text-2xl font-bold uppercase tracking-tight mb-6">
+            <h2 className="text-xl md:text-2xl font-lime font-bold uppercase tracking-tight mb-6">
               Director Statement
             </h2>
             <div className="text-sm md:text-base leading-relaxed font-regular space-y-4 max-w-3xl mx-auto text-center md:text-center">
@@ -67,7 +67,7 @@ const ProjectPage = () => {
         {/* Credits */}
         <footer className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center border-t border-black/10 pb-10">
           <div>
-            <h3 className="text-lg font-bold uppercase tracking-tighter mb-4">
+            <h3 className="text-lg font-bold font-lime uppercase tracking-tighter mb-4">
               Cast
             </h3>
             <ul className="text-base font-regular space-y-1">
@@ -80,7 +80,7 @@ const ProjectPage = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold uppercase tracking-tighter mb-4">
+            <h3 className="text-lg font-bold uppercase font-lime tracking-tighter mb-4">
               DP
             </h3>
             <p className="text-base font-medium">Shubham Gosalia</p>

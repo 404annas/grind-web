@@ -56,7 +56,7 @@ const ProjectCard = ({
           <ArrowUpRight size={24} strokeWidth={3} />
         </div>
 
-        <h3 className="text-white text-lg md:text-xl font-bold leading-tight tracking-tight mb-2">
+        <h3 className="text-white text-lg md:text-xl font-lime font-bold leading-tight tracking-tight mb-2">
           {title}
         </h3>
 

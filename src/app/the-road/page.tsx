@@ -87,7 +87,7 @@ const ProjectPage = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter mb-8 italic"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-lime font-black uppercase tracking-tighter mb-8 italic"
         >
           The <span className="italic text-white">Road</span>
         </motion.h1>
@@ -110,7 +110,7 @@ const ProjectPage = () => {
       <section className="px-6 py-10 bg-gradient-to-b from-black to-[#05080a]">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
           <div>
-            <h2 className="text-xl font-bold uppercase text-white mb-8">
+            <h2 className="text-xl font-bold uppercase font-lime text-white mb-8">
               Synopsis
             </h2>
             <p className="text-sm sm:text-base text-gray-300 leading-normal font-light">
@@ -128,7 +128,7 @@ const ProjectPage = () => {
             </p>
           </div>
           <div>
-            <h2 className="text-xl font-bold uppercase text-white mb-8 pt-10">
+            <h2 className="text-xl font-bold uppercase font-lime text-white mb-8 pt-10">
               Director Statement
             </h2>
             <div className="text-sm sm:text-base text-gray-300 leading-normal font-light space-y-6 max-w-3xl">
@@ -152,7 +152,7 @@ const ProjectPage = () => {
 
       {/* Production Video (Wireframe style) */}
       <section className="px-6 py-10 max-w-6xl mx-auto">
-        <h2 className="text-center text-xl font-bold uppercase text-white mb-10">
+        <h2 className="text-center text-xl font-bold font-lime uppercase text-white mb-10">
           Production Vlog
         </h2>
         <div className="w-full flex justify-center overflow-hidden">
@@ -168,7 +168,7 @@ const ProjectPage = () => {
 
       {/* Gallery: The Road (3 Items per row) */}
       <section className="px-6 pb-10 md:pt-10 pt-0 max-w-6xl mx-auto">
-        <h2 className="text-xl font-bold uppercase text-white mb-10">
+        <h2 className="text-xl font-bold uppercase font-lime text-white mb-10">
           Visual Journey
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -192,7 +192,7 @@ const ProjectPage = () => {
 
       {/* Gallery: Cast */}
       <section className="px-6 py-10 max-w-4xl mx-auto">
-        <h2 className="text-xl font-bold uppercase text-white mb-10 text-center">
+        <h2 className="text-xl font-bold uppercase font-lime text-white mb-10 text-center">
           The Cast
         </h2>
         <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
@@ -217,7 +217,7 @@ const ProjectPage = () => {
 
       {/* FAQ Section */}
       <section className="px-6 py-10 max-w-5xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 tracking-tighter uppercase italic">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-lime mb-10 tracking-tighter uppercase italic">
           Questions <span className="italic text-white">&</span> Answers
         </h2>
         <div className="space-y-4">
@@ -261,7 +261,7 @@ const ProjectPage = () => {
 
       {/* Footer Tribute */}
       <footer className="py-10 px-6 text-center border-t border-white/5">
-        <p className="text-white text-xl font-bold uppercase mb-8">
+        <p className="text-white text-xl font-bold font-lime uppercase mb-8">
           In Memory
         </p>
         <p className="max-w-2xl sm:text-base text-sm mx-auto text-gray-400 leading-normal">

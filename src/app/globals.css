@@ -14,6 +14,12 @@ html {
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
   --font-mono: var(--font-geist-mono);
+  --font-lime: var(--font-lime);
+}
+
+/* Limelight font utility */
+.font-lime {
+  font-family: var(--font-lime), cursive;
 }
 
 @media (prefers-color-scheme: dark) {

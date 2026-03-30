@@ -96,7 +96,7 @@ const Loader = ({ onComplete }: LoaderProps) => {
             animate={{ scale: 1, opacity: 1 }}
             className="relative z-10 text-center"
           >
-            <div className="text-8xl md:text-9xl font-black tracking-tighter">
+            <div className="text-8xl md:text-9xl font-black font-lime tracking-tighter">
               {Math.floor(progress)}%
             </div>
             
@@ -114,7 +114,7 @@ const Loader = ({ onComplete }: LoaderProps) => {
             <motion.p
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="mt-4 text-sm uppercase tracking-widest text-white/50"
+              className="mt-4 text-sm uppercase tracking-wide font-lime text-white/50"
             >
               Loading
             </motion.p>

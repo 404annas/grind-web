@@ -10,6 +10,7 @@ const navItems = [
   { label: "About", id: "about", icon: UserRound },
   { label: "Projects", id: "projects", icon: FolderOpen },
   { label: "Gallery", href: "/gallery", icon: Image },
+  { label: "Contact", href: "/contact", icon: Phone }
 ];
 
 const Footer = () => {
@@ -46,8 +47,8 @@ const Footer = () => {
             className="w-[500px] h-auto max-w-full mx-auto object-contain"
           />
 
-          <p className="uppercase text-sm sm:text-base md:text-xl lg:pr-24">
-            A filmmaker & cinematographer
+          <p className="uppercase text-sm sm:text-base font-lime md:text-xl lg:pr-24">
+            Director / Cinematographer
           </p>
           <p className="text-xs text-left md:block hidden italic pt-8 pl-6 text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
         </div>

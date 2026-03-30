@@ -7,13 +7,12 @@ const FloatingInstagram = () => {
   return (
     <div className="fixed bottom-6 right-6 z-[100] flex flex-col gap-3">
       {/* Phone Number */}
-      <a
+      {/* <a
         href="tel:7474665773"
         className="flex items-center justify-center gap-2 rounded-full bg-black p-4 sm:p-5 text-white border border-white hover:bg-white/10 transition-colors duration-300"
       >
         <Phone size={22} />
-        {/* <span className="text-sm font-medium pr-1">7474665773</span> */}
-      </a>
+      </a> */}
       
       {/* Instagram */}
       <a
