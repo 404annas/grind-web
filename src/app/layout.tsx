@@ -31,9 +31,13 @@ export default function RootLayout({
       className={`${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`${poppins.className} min-h-full flex flex-col`}>
-        {children}
-        <FloatingInstagram />
-        <Footer />
+        <div id="main-content" className="flex-1 flex flex-col">
+          {children}
+        </div>
+        <div id="persistent-elements">
+          <FloatingInstagram />
+          <Footer />
+        </div>
       </body>
     </html>
   );

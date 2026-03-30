@@ -1,10 +1,36 @@
 'use client';
+import { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 
 const heroVid = '/hero-video-web.mp4';
 const logoSrc = '/logo2.svg'; // Using your requested logo only
 
-const Hero = () => {
+interface HeroProps {
+  onReady?: () => void;
+}
+
+const Hero = ({ onReady }: HeroProps) => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    // Preload the video
+    const video = document.createElement('video');
+    video.src = heroVid;
+    video.preload = 'auto';
+    
+    const handleCanPlay = () => {
+      setIsVideoLoaded(true);
+      onReady?.();
+    };
+    
+    video.addEventListener('canplaythrough', handleCanPlay);
+    video.load();
+    
+    return () => {
+      video.removeEventListener('canplaythrough', handleCanPlay);
+    };
+  }, [onReady]);
+
   return (
     <section id="home" className="h-screen w-full overflow-hidden bg-black p-2 md:p-3">
       {/* Main Rounded Container */}
