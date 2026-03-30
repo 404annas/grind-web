@@ -16,7 +16,13 @@ const Navbar = () => {
   const handleNavClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
     sectionId?: string,
+    href?: string,
   ) => {
+    if (href) {
+      router.push(href);
+      return;
+    }
+
     if (!sectionId) return;
 
     event.preventDefault();
@@ -52,8 +58,8 @@ const Navbar = () => {
         {navItems.map((item) => (
           <a
             key={item.label}
-            href={item.id ? `/#${item.id}` : "#"}
-            onClick={(event) => handleNavClick(event, item.id)}
+            href={item.href ? item.href : item.id ? `/#${item.id}` : "#"}
+            onClick={(event) => handleNavClick(event, item.id, item.href)}
             className="relative text-lg font-medium text-white/90 group"
           >
             {item.label}
@@ -114,8 +120,8 @@ const Navbar = () => {
                 {navItems.map((item) => (
                   <a
                     key={item.label}
-                    href={item.id ? `/#${item.id}` : "#"}
-                    onClick={(event) => handleNavClick(event, item.id)}
+                    href={item.href ? item.href : item.id ? `/#${item.id}` : "#"}
+                    onClick={(event) => handleNavClick(event, item.id, item.href)}
                     className="text-base font-semibold text-white/90 hover:text-white transition-colors duration-300"
                   >
                     {item.label}

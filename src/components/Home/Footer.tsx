@@ -3,12 +3,13 @@
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { Phone, Home, FolderOpen, Image, UserRound } from "lucide-react";
+import Link from "next/link";
 
 const navItems = [
   { label: "Home", id: "home", icon: Home },
   { label: "About", id: "about", icon: UserRound },
   { label: "Projects", id: "projects", icon: FolderOpen },
-  { label: "Gallery", id: "gallery", icon: Image },
+  { label: "Gallery", href: "/gallery", icon: Image },
 ];
 
 const Footer = () => {
@@ -55,6 +56,17 @@ const Footer = () => {
         <nav className="flex md:flex-row flex-col items-center md:items-end justify-center gap-2 md:gap-8">
           {navItems.map((item) => {
             const Icon = item.icon;
+            if (item.href) {
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="text-sm md:text-base hover:opacity-70 transition-opacity duration-300 flex items-center gap-2 font-normal"
+                >
+                  {item.label}
+                </Link>
+              );
+            }
             return (
               <a
                 key={item.label}
@@ -68,10 +80,6 @@ const Footer = () => {
             );
           })}
         </nav>
-        <div className="flex items-center gap-2 font-normal md:text-base text-sm">
-          <Phone size={16} />
-          <span>7474665773</span>
-        </div>
       </div>
       <p className="text-xs md:hidden block text-left pt-2 italic text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
     </div>
