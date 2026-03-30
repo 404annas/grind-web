@@ -43,7 +43,7 @@ const Hero = ({ onReady }: HeroProps) => {
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover opacity-20"
         >
           <source src={heroVid} type="video/mp4" />
         </video>

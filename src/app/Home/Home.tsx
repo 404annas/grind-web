@@ -6,6 +6,7 @@ import Hero from '@/components/Home/Hero';
 import HomeHashScroller from '@/components/Home/HomeHashScroller';
 import Projects from '@/components/Home/Projects';
 import Loader from '@/components/Home/Loader';
+import Hero2 from '@/components/Home/Hero2';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +34,7 @@ const Home = () => {
     <>
       {isLoading && <Loader onComplete={handleLoaderAnimated} />}
       <HomeHashScroller />
-      <Hero onReady={handleHeroReady} />
+      <Hero2   onReady={handleHeroReady} />
       {!isLoading && (
         <>
           <About />
