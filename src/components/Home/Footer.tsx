@@ -9,7 +9,6 @@ const navItems = [
   { label: "About", id: "about", icon: UserRound },
   { label: "Projects", id: "projects", icon: FolderOpen },
   { label: "Gallery", id: "gallery", icon: Image },
-  { label: "7474665773", id: "contact", icon: Phone },
 ];
 
 const Footer = () => {
@@ -36,7 +35,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="relative bg-black text-white py-8 px-4 sm:px-10 uppercase text-center font-bold flex flex-col md:flex-row items-center justify-between gap-6 border-t border-white/10">
+    <div className="relative bg-black text-white py-8 px-4 sm:px-10 uppercase text-center font-bold flex flex-col md:flex-row md:items-start items-center justify-between gap-6 border-t border-white/10">
       <div className="flex gap-4 items-center">
         <div>
           <img
@@ -49,11 +48,11 @@ const Footer = () => {
           <p className="uppercase text-sm sm:text-base md:text-xl lg:pr-24">
             A filmmaker & cinematographer
           </p>
-          <p className="text-xs text-left md:block hidden pt-8 pl-6 text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
+          <p className="text-xs text-left md:block hidden italic pt-8 pl-6 text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
         </div>
       </div>
-      <div className="lg:pr-20">
-        <nav className="flex flex-col items-start justify-center gap-2">
+      <div className="lg:pr-24 pt-0 md:pt-8 flex flex-col items-center md:items-end gap-4">
+        <nav className="flex md:flex-row flex-col items-center md:items-end justify-center gap-2 md:gap-8">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -61,16 +60,20 @@ const Footer = () => {
                 key={item.label}
                 href={item.id ? `/#${item.id}` : "#"}
                 onClick={(event) => handleNavClick(event, item.id)}
-                className="text-sm md:text-base hover:opacity-70 transition-opacity duration-300 flex items-center gap-2"
+                className="text-sm md:text-base hover:opacity-70 transition-opacity duration-300 flex items-center gap-2 font-normal"
               >
-                <Icon size={16} />
+                {/* <Icon size={16} /> */}
                 {item.label}
               </a>
             );
           })}
         </nav>
+        <div className="flex items-center gap-2 font-normal md:text-base text-sm">
+          <Phone size={16} />
+          <span>7474665773</span>
+        </div>
       </div>
-      <p className="text-xs md:hidden block text-left pt-2 text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
+      <p className="text-xs md:hidden block text-left pt-2 italic text-white/50">Developed by <a href="https://techxudo.com/" target="_blank" className="text-white">Techxudo</a></p>
     </div>
   );
 };
