@@ -40,21 +40,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute -top-6 md:-top-10 left-0 z-50 flex w-full items-center justify-between px-4 py-4 md:px-10 md:py-5 bg-transparent">
+    <nav className="absolute top-2 left-0 z-50 flex w-full items-center justify-between px-4 py-4 md:px-10 md:py-5 bg-transparent">
       {/* Logo */}
       <Link href={"/"}>
-        <div className="w-28 md:w-40 hover:opacity-80 cursor-pointer transition-all duration-300">
-          <Image
-            src={logo}
-            alt="Kadir logo"
-            className="h-auto w-full object-contain"
-            priority
-          />
+        <div className="flex w-28 cursor-pointer items-center transition-all duration-300 md:w-40">
+          <h1 className="font-lime text-3xl leading-none tracking-tight text-white md:text-5xl">
+            KADIR
+            <sup className="ml-2 align-top text-xs not-italic">TM</sup>
+          </h1>
         </div>
       </Link>
 
       {/* Menu Items (Desktop) */}
-      <div className="hidden md:flex items-center gap-10">
+      <div className="hidden md:flex items-center gap-10 mr-30">
         {navItems.map((item) => (
           <a
             key={item.label}
@@ -71,10 +69,10 @@ const Navbar = () => {
       {/* Right Side: Desktop Contact & Mobile Toggle */}
       <div className="flex items-center gap-4">
         {/* Contact info - Hidden on mobile, shown on desktop */}
-        <div className="hidden md:flex items-center gap-2 text-white rounded-full border border-white/20 bg-white/5 px-5 py-3">
+        {/* <div className="hidden md:flex items-center gap-2 text-white rounded-full border border-white/20 bg-white/5 px-5 py-3">
           <Phone size={18} className="text-white" />
           <p className="text-white md:text-base text-sm">7474665773</p>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Icon */}
         <button

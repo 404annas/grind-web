@@ -74,7 +74,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-zinc-500 uppercase font-lime tracking-wide text-xs mb-1">Location</h3>
-                    <p className="text-sm sm:text-base">Oslo, Norway / Worldwide</p>
+                    <p className="text-sm sm:text-base">LA</p>
                   </div>
                 </div>
 
@@ -95,16 +95,6 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-medium text-zinc-500 uppercase tracking-wide font-lime text-xs mb-1">Email</h3>
                     <p className="text-sm sm:text-base">contact@kadirmayel.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-5">
-                  <div className="mt-1 bg-zinc-900 p-3 rounded-full">
-                    <Clock size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-zinc-500 uppercase tracking-wide font-lime text-xs mb-1">Working Hours</h3>
-                    <p className="text-sm sm:text-base">Mon — Fri: 09:00 - 18:00</p>
                   </div>
                 </div>
               </div>

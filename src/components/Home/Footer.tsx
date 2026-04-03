@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const navItems = [
   { label: "Home", id: "home", icon: Home },
-  { label: "About", id: "about", icon: UserRound },
-  { label: "Projects", id: "projects", icon: FolderOpen },
+  { label: "About", href: "/about", icon: UserRound },
+  { label: "Projects", href: "/projects", icon: FolderOpen },
   { label: "Gallery", href: "/gallery", icon: Image },
   { label: "Contact", href: "/contact", icon: Phone }
 ];
